@@ -1,0 +1,11 @@
+name: GradientBoostingRegressor
+train: ShallowTraining
+grid:
+  learning_rate: 
+    - 1.0e-4
+    - 1.0e-3
+      # 1e-5
+  n_estimators:
+    - 100
+      # 500
+      # 1000

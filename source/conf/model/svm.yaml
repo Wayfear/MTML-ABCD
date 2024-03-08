@@ -1,0 +1,8 @@
+name: SVC
+train: ShallowTraining
+grid:
+  C: np.logspace(-2, 2, 5)
+  kernel: 
+    # - linear
+    # - poly
+    - rbf

@@ -1,0 +1,4 @@
+name: GraphTransformer
+self_attention_layer: 2
+readout: concat
+nhead: 4

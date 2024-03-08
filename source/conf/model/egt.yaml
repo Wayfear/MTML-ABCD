@@ -1,0 +1,24 @@
+name: EGT
+node_width: 360
+edge_width: 1
+num_heads: 2
+model_height: 3
+node_mha_dropout: 0.
+node_ffn_dropout: 0.
+edge_mha_dropout: 0.
+edge_ffn_dropout: 0.
+attn_dropout: 0.
+attn_maskout: 0.
+activation: elu
+clip_logits_value: 
+  - -5
+  - 5
+node_ffn_multiplier: 2.
+edge_ffn_multiplier: 2.
+scale_dot: True
+scale_degree: False
+node_ended: False
+edge_ended: False
+egt_simple: False
+node_update: True
+edge_update: True

@@ -1,0 +1,9 @@
+name: c_r_mixup
+continus: False
+discrete: False
+graphon: False
+renn_mixup: True
+c_mixup: True
+drop_node: False
+drop_edge: False
+alpha: 0.5

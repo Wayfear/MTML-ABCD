@@ -1,0 +1,4 @@
+name: SparseNN
+dropout: 0.5
+threshold: 0.42
+step: 2

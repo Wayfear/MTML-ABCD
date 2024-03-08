@@ -1,0 +1,8 @@
+name: RandomForestClassifier
+train: ShallowTraining
+grid:
+  n_estimators: [100, 500]
+  criterion:
+    - gini
+    - entropy
+  max_depth: [5, 10]

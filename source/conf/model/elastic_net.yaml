@@ -1,0 +1,5 @@
+name: ElasticNet
+train: ShallowTraining
+grid:
+  alpha: np.logspace(-4, -0.5, 5)
+  l1_ratio: np.linspace(0.01, 1, 5)

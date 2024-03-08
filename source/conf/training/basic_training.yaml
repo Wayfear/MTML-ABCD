@@ -1,0 +1,7 @@
+name: Train
+epochs: 200
+node_file: /home/Anonymous/dataset/ABCD/HCP2016_Node_Informatio.csv
+ig_visualize: True
+save_ig: True
+save_per_epoch: 10
+standard_scaler: True
