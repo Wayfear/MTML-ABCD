@@ -1,0 +1,198 @@
+name: abcd_mtml
+batch_size: 16
+test_batch_size: 16
+val_batch_size: 16
+train_set: 0.7
+val_set: 0.1
+
+views:
+  - name: rest-state
+    node_feature: /home/Anonymous/dataset/ABCD/abcd_rest-pearson-HCP2016.npy
+    node_id: /home/Anonymous/dataset/ABCD/ids_HCP2016.txt
+  - name: SST
+    node_feature: /home/Anonymous/dataset/ABCD/SST_hcp2016.npy
+    node_id: /home/Anonymous/dataset/ABCD/SST_hcp2016_subjects.txt
+  - name: nback
+    node_feature: /home/Anonymous/dataset/ABCD/nback_hcp2016.npy
+    node_id: /home/Anonymous/dataset/ABCD/nback_hcp2016_subjects.txt
+
+
+drop_last: True
+use_balance_weight: True
+
+tasks:
+  - name: vocabulary
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: nihtbx_picvocab_uncorrected
+    weight: 1.0
+  - name: attention
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: nihtbx_flanker_uncorrected
+    weight: 1.0
+  - name: working_memory
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: nihtbx_list_uncorrected
+    weight: 1.0
+  - name: executive_function
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: nihtbx_cardsort_uncorrected
+    weight: 1.0
+  - name: processing_speed
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: nihtbx_pattern_uncorrected
+    weight: 1.0
+  - name: episodic_memory
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: nihtbx_picture_uncorrected
+    weight: 1.0
+  - name: reading
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: nihtbx_reading_uncorrected
+    weight: 1.0
+  - name: fluid_cognition
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: nihtbx_fluidcomp_uncorrected
+    weight: 1.0
+  - name: crystallized_cognition
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: nihtbx_cryst_uncorrected
+    weight: 1.0
+  - name: overall_cognition
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: nihtbx_totalcomp_uncorrected
+    weight: 1.0
+  - name: short_delay_recall
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: pea_ravlt_sd_trial_vi_tc
+    weight: 1.0
+  - name: long_delay_recall
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: pea_ravlt_ld_trial_vii_tc
+    weight: 1.0
+  - name: fluid_intelligence
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: pea_wiscv_trs
+    weight: 1.0
+  - name: visuospatial_accuracy
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: lmt_scr_perc_correct
+    weight: 1.0
+  - name: visuospatial_reaction_time
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: lmt_scr_rt_correct
+    weight: 1.0
+  - name: negative_urgency
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: upps_y_ss_negative_urgency
+    weight: 1.0
+  - name: lack_of_planning
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: upps_y_ss_lack_of_planning
+    weight: 1.0
+  - name: sensation_seeking
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: upps_y_ss_sensation_seeking
+    weight: 1.0
+  - name: positive_urgency
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: upps_y_ss_positive_urgency
+    weight: 1.0
+  - name: lack_perseverance
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: upps_y_ss_lack_of_perseverance
+    weight: 1.0
+  - name: behavioral_inhibition
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: bis_y_ss_bis_sum
+    weight: 1.0
+  - name: reward_responsiveness
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: bis_y_ss_bas_rr
+    weight: 1.0
+  - name: drive
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: bis_y_ss_bas_drive
+    weight: 1.0
+  - name: fun_seeking
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: bis_y_ss_bas_fs
+    weight: 1.0
+  - name: anxious_depressed
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: cbcl_scr_syn_anxdep_r
+    weight: 1.0
+  - name: withdrawn_depressed
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: cbcl_scr_syn_withdep_r
+    weight: 1.0
+  - name: somatic_complaints
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: cbcl_scr_syn_somatic_r
+    weight: 1.0
+  - name: social_problems
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: cbcl_scr_syn_social_r
+    weight: 1.0
+  - name: thought_problems
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: cbcl_scr_syn_thought_r
+    weight: 1.0
+  - name: attention_problems
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: cbcl_scr_syn_attention_r
+    weight: 1.0
+  - name: rule-breaking_behavior
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: cbcl_scr_syn_rulebreak_r
+    weight: 1.0
+  - name: aggressive_behavior
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: cbcl_scr_syn_aggressive_r
+    weight: 1.0
+  - name: total_psychosis_symptoms
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: pps_y_ss_number
+    weight: 1.0
+  - name: psychosis_severity
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: pps_y_ss_severity_score
+    weight: 1.0
+  - name: mania
+    label: /home/Anonymous/dataset/ABCD/ids2multilabel36.txt
+    regression: True
+    column: pgbi_p_ss_score
+    weight: 1.0

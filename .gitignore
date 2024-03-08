@@ -7,7 +7,6 @@ wandb/*
 result/*
 outputs/*
 multirun/*
-source/conf/dataset/*
 runs/*
 *.csv
 *.png
